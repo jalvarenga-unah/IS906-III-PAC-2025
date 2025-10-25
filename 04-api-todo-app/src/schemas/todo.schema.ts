@@ -11,6 +11,7 @@ const todoSchema = z.object({
   }).min(1, "El titulo es requerido"),
   description: z.string().optional().nullable(),
   completed: z.boolean().default(false),
+  userId: z.number().int().optional().nullable()
 });
 
 // export type Todo = z.infer<typeof todoSchema>;
@@ -18,3 +19,7 @@ const todoSchema = z.object({
 export const validateTodo = (todo: Partial<Todo>) => {
   return todoSchema.safeParse(todo);
 };
+ 
+export const validateTodoPartial = (todo: Partial<Todo>) =>{
+  return todoSchema.partial().safeParse(todo)
+}

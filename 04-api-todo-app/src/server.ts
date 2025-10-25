@@ -1,9 +1,10 @@
 import express from "express";
-import { loadEnvFile } from "node:process";
+// import { loadEnvFile } from "node:process";
 import todosRoutes from "./routes/todos.routes";
 import { errorHandler } from "./middlewares/errorHandler";
-
-loadEnvFile(); // cargar las variables de entorno
+import dotenv  from 'dotenv'
+// loadEnvFile(); // cargar las variables de entorno
+dotenv.config()
 
 const app = express();
 app.use(express.json())// middleware, parsea el body de las peticiones a JSON
