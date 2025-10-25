@@ -4,7 +4,7 @@ import { randomUUID as uuid } from "node:crypto";
 
 //TODO: crear conexión a base de datos
 // "base de datos"
-const todos: Todo[] = [];
+const todos: Todo[] = []
 
 export const getAll = async () => todos;
 

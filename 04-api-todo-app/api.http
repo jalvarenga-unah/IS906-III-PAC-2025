@@ -9,7 +9,7 @@ POST http://localhost:3000/todos
 Content-Type: application/json
 
 {
-  "title": "Continuación de la API",
+  "titlee": "Creación de una tarea",
   "description": null,
   "author": "Juan Alvarenga",
   "fkejnwf":124,
