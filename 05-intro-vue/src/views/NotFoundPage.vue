@@ -1,0 +1,3 @@
+<template>
+  <h1>Esta ruta no existe</h1>
+</template>

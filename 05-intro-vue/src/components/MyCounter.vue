@@ -2,7 +2,10 @@
 import { ref } from 'vue'
 
 // const props = defineProps({
-//   value: Number,
+//   value: {
+//     type: Number,
+//     default: 0
+//   },
 //   title: {
 //     type: String,
 //     required: true,
