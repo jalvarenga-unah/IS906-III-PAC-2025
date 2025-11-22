@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import type { Todo } from '@/interfaces/todo.interface'
-
-//TODO: crear la funcion para cambiar estado a una tarea
-
 interface Prop {
   todo: Todo
 }
 
 defineProps<Prop>()
+
+// "Crear" eventos para nuestro componente
+defineEmits<{
+  toggle: [id: string] // equivalente a una funcion void y que no recibe parametros
+}>()
 </script>
 
 <template>
@@ -29,6 +31,7 @@ defineProps<Prop>()
     </div>
 
     <button
+      @click="$emit('toggle', todo.id)"
       :class="[
         'shrink-0 text-sm px-3 py-1 rounded-full transition-colors',
         todo.completed
